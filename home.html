@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎉 Birthday Surprise! 🎉</title>
+<style>
+    body {
+        background: #c28de9; /* light lavender */
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        font-family: 'Times New Roman', serif;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    #birthday-heading {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #c2185b;
+        text-shadow: 2px 2px #ff80ab, -2px -2px #ff80ab;
+        margin-bottom: 50px;
+    }
+
+    .cake-container {
+        position: relative;
+        cursor: pointer;
+    }
+
+    .cake {
+        position: relative;
+        width: 250px;
+        height: 120px;
+    }
+    .cake-layer {
+        position: absolute;
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: 0 5px 0 rgba(0,0,0,0.2);
+    }
+    .layer-bottom { height:50px; background:#f5e1a4; bottom:0; }
+    .layer-middle { height:40px; background:#f5e1a4; bottom:50px; }
+    .layer-top { height:30px; background:#f5e1a4; bottom:90px; }
+    .icing {
+        position: absolute;
+        top: -20px;
+        width: 100%;
+        height: 30px;
+        background: #c2185b;
+        border-radius: 50%;
+        box-shadow: inset 0 -5px 0 rgba(0,0,0,0.1);
+    }
+
+    .candle-set {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        top: -50px;
+    }
+    .candle {
+        width: 8px;
+        height: 40px;
+        background-color: #fff59d;
+        border-radius: 2px;
+        position: relative;
+    }
+    .flame {
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 10px;
+        height: 20px;
+        background: orange;
+        border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+        box-shadow: 0 0 12px 3px yellow, 0 0 18px 5px #fff176;
+        animation: flicker 0.2s infinite alternate;
+    }
+    @keyframes flicker {
+        from { opacity:1; transform: translateX(-50%) scale(1);}
+        to { opacity:0.9; transform: translateX(-50%) scale(1.05);}
+    }
+
+    .floating-heart {
+        position: absolute;
+        font-size: 30px;
+        color: #ff69b4;
+        opacity: 0.3;
+        animation: floatHeart linear infinite;
+    }
+    @keyframes floatHeart {
+        0% { transform: translateY(100vh) translateX(0) rotate(0deg);}
+        100% { transform: translateY(-50px) translateX(50px) rotate(360deg);}
+    }
+
+    /* Secret Message */
+    #secret-message {
+        display: none;
+        opacity: 0;
+        transition: opacity 1.5s ease-in-out;
+        color: #000; /* black text */
+        font-weight: 500;
+        font-size: 1.4rem;
+        background: rgba(255,255,255,0.8);
+        padding: 25px;
+        border-radius: 20px;
+        line-height: 1.6;
+        max-width: 90%;
+        margin-top: 50px;
+        text-align: justify;
+    }
+    #secret-message.show {
+        display: block;
+        opacity: 1;
+    }
+</style>
+</head>
+<body>
+
+<div id="birthday-heading">💖 Happy Birthday to my Bestesttttttt Friend 💖</div>
+
+<div id="cakeArea" class="cake-container" onclick="showSecretMessage()">
+    <div class="cake">
+        <div class="cake-layer layer-bottom"></div>
+        <div class="cake-layer layer-middle"></div>
+        <div class="cake-layer layer-top"></div>
+        <div class="icing"></div>
+        <div class="candle-set">
+            <div class="candle"><div class="flame"></div></div>
+            <div class="candle"><div class="flame"></div></div>
+            <div class="candle"><div class="flame"></div></div>
+            <div class="candle"><div class="flame"></div></div>
+        </div>
+    </div>
+</div>
+
+<!-- 🎁 Secret Message -->
+<div id="secret-message">
+🎉 HAPPIEST BIRTHDAY TO THE MOST CHINDIEST PERSON I HAVE EVER MET! 🎉<br><br>
+On your special day I wish all the best wishes and happiness in your life. May you have the brightest future ahead and may you always keep smiling... you are a gift to me! I can never imagine my college life without you now... you are very special for me. Mujhe lagta tha ki bs yhi hai mujhe ese hi college mai akele ghoomte rehna pdega or wait krni hogi ki kb meri dost free ho or mai uske pass jau — phir tu mil gya.<br><br>
+Pehle mujhe lgta tha ki meri life mai mere doston ki kami poori krne wala insaan hai tu aur mai bahut grateful thi iske liye bhi lekin ab tu kisi ki kami poori krne ke liye nahi hai meri life mai — tu khud ek important insaan hai mere life ka.<br>
+Tere sath har time healing, comfort aur security se bhara hota hai. Mujhe nahi lgta hai maine aj tak apne ghar walon ke alawa kisi aur par itna chilaaya hai bina awkwardness ke jitna tujh par chilaaya hai maine aur best baat to yeh ki tu sun bhi leta hai bina ego ke!<br>
+Bohot patience hai tujh mai... lekin... lekin... tera mooh bohot chalne laga hai mai bata rahi hu birthday wish gayi side par, ise warning hi samjh! Thoda dhang se reh liya kar mere sath jese pehle rehta tha, ab to bht chillane laga hai.<br>
+Mai itna chunchun nahi karti jitna tu karne laga hai huhh! Baaki birthday ke liye yeh mera ek chhota sa gift hai jisme bohot mehnat lagi hai, aur isi ke chakkar mai tujhe bye bolke idhar aa gayi Tujhe itna pata hai ki mai project bana rhi hu, lekin tu nahi jaanta tha ki tera hi birthday project hai yeh!<br><br>
+Tu bohot acha hai yrrr... Happy Birthday mere chindi! 🎂💕<br>
+Chal ab khush ho ja, itna pyara gift diya hai tujhe maine! 💝💫
+</div>
+
+<script>
+    // floating hearts
+    const totalHearts = 30;
+    for(let i=0;i<totalHearts;i++){
+        const heart = document.createElement('div');
+        heart.className = 'floating-heart';
+        heart.style.left = Math.random()*100 + 'vw';
+        heart.style.fontSize = (25 + Math.random()*25) + 'px';
+        heart.style.animationDuration = (5 + Math.random()*5) + 's';
+        heart.style.opacity = 0.1 + Math.random()*0.3;
+        heart.innerHTML = '💕';
+        document.body.appendChild(heart);
+    }
+
+    // click to show secret message
+    function showSecretMessage() {
+        document.getElementById('cakeArea').style.display = 'none';
+        document.getElementById('birthday-heading').style.display = 'none';
+        const msg = document.getElementById('secret-message');
+        msg.classList.add('show');
+    }
+</script>
+
+</body>
+</html>
